@@ -1,0 +1,21 @@
+CREATE SCHEMA `college_db` ;
+INSERT INTO `college_db`.`student` (`rollno_id`, `name`, `city`, `marks`) VALUES ('101', 'anchal', 'pune', '89');
+INSERT INTO `college_db`.`student` (`rollno_id`, `name`, `city`, `marks`) VALUES ('102', 'aditya', 'nagpur', '91');
+INSERT INTO `college_db`.`student` (`rollno_id`, `name`, `city`, `marks`) VALUES ('103', 'ramesh', 'mumbai', '76');
+INSERT INTO `college_db`.`student` (`rollno_id`, `name`, `city`, `marks`) VALUES ('104', 'kunal', 'jaipur', '67');
+INSERT INTO `college_db`.`student` (`rollno_id`, `name`, `city`, `marks`) VALUES ('105', 'sakshi', 'kota', '92');
+INSERT INTO `college_db`.`student` (`rollno_id`, `name`, `city`, `marks`) VALUES ('106', 'viraj', 'patna', '71');
+INSERT INTO `college_db`.`student` (`rollno_id`, `name`, `city`, `marks`) VALUES ('107', 'harshal', 'nagpur', '85');
+INSERT INTO `college_db`.`student` (`rollno_id`, `name`, `city`, `marks`) VALUES ('108', 'mayur', 'mumbai', '98');
+INSERT INTO `college_db`.`student` (`rollno_id`, `name`, `city`, `marks`) VALUES ('109', 'avantika', 'bengluru', '76');
+INSERT INTO `college_db`.`student` (`rollno_id`, `name`, `city`, `marks`) VALUES ('110', 'mayank', 'bengluru', '56');
+SELECT * FROM college_db.student WHERE city = "pune";
+SELECT * FROM college_db.student WHERE marks > 75;
+SELECT * FROM college_db.student order by marks desc;
+SELECT count( *), city  FROM college_db.student  group by city;
+update college_db.student  set marks= marks+5 where rollno_id >0;
+delete   from college_db.student where marks< 35;
+delete   from college_db.student where marks< 35;
+SELECT name FROM college_db.student order by name;
+select  city,count(*)  as city_wise_student_count FROM college_db.student
+ group by city ;
